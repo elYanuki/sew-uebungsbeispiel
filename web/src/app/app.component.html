@@ -1,0 +1,9 @@
+
+<label>artikelnummer:</label> <input [(ngModel)]="currentProductId" type="number">
+<button (click)="addProductId()">hinzufügen</button>
+
+<button (click)="createOrder()">senden</button>
+
+<ul>
+  <li *ngFor="let id of productIds">{{id}}</li>
+</ul>

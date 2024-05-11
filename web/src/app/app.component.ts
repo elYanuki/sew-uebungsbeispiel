@@ -24,7 +24,7 @@ export class AppComponent {
 
   createOrder(): void {
     this.shopService.createOrder(this.productIds).subscribe((response) => {
-      if(response) this.productIds = []
+      if(response.status == 201) this.productIds = []
     })
   }
 }

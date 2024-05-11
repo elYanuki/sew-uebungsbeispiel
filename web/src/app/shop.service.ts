@@ -10,6 +10,6 @@ export class ShopService {
   http = inject(HttpClient)
 
   createOrder(productIds: number[]) {
-    return this.http.post('http://localhost:8080/shop/createOrder', productIds)
+    return this.http.post('http://localhost:8080/shop/createOrder', productIds, {observe: "response"})
   }
 }
